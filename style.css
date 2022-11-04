@@ -1,0 +1,34 @@
+.masterContainer {
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.instruction {
+    padding: 1em;
+}
+
+/*grid-template columns: repeat(= number of chosen rows)*/
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+}
+
+/*Font size for gridItem needs to be equal to (height of container divided by number of rows) in px*/
+
+.gridItem {
+    font-size: 10px;
+    height: 1em;
+    width: 1em;
+    border-radius: 15%;
+    
+}
+
+.container .clicked {
+    background-color: blue;
+}
