@@ -1,7 +1,7 @@
 const container = document.querySelector(".container");
 console.log(container);
 
-let rows = prompt();
+let rows = prompt("How many rows?");
 let totalGridItems = rows*rows;
 let fontSizez = 400/rows;
 let fontSizeString = fontSizez + "px";
