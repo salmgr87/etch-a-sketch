@@ -2,30 +2,33 @@
     padding: 5em;
     display: flex;
     justify-content: center;
+
     
 }
 
 .instruction {
     padding: 1em;
+    font-size: 30px;
 }
 
 /*grid-template columns: repeat(= number of chosen rows)*/
 
 .container {
+    font-size: 400px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border-style: solid;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
 }
 
 /*Font size for gridItem needs to be equal to (height of container divided by number of rows) in px*/
 
 .gridItem {
-    font-size: 10px;
+    font-size: 100px;
     height: 1em;
     width: 1em;
-    border-radius: 15%;
+    border-radius: 5%;
     
 }
 
