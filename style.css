@@ -22,6 +22,7 @@
     height: 400px;
 }
 
+
 /*Font size for gridItem needs to be equal to (height of container divided by number of rows) in px*/
 
 .gridItem {

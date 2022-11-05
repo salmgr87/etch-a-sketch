@@ -6,27 +6,40 @@ let totalGridItems = rows*rows;
 let fontSizez = 400/rows;
 let fontSizeString = fontSizez + "px";
 
+createFraction();
+
 //changes the container to have the correct rows
-let columns = 'repeat: (' + rows + ", 1fr)";
-let correctRows = document.getElementsByClassName('container');
-correctRows[0].style.gridTemplateColumns = columns;
+
+function createFraction() {
+        let columns = 'repeat(' + rows + ", 1fr)";
+        //let correctRows = document.getElementById('blockContainer');
+
+        container.style.gridTemplateColumns = columns;
+        
+        createBlocks();
+};
+
 
 
 //creates grid of blocks
-for (i=0; i<(totalGridItems); i++) {
-        const item = document.createElement('div');
-        item.classList.add('gridItem');
-        container.appendChild(item);
-        
-}
+function createBlocks() { 
+        for (i=0; i<(totalGridItems); i++) {
+                const item = document.createElement('div');
+                item.classList.add('gridItem');
+                container.appendChild(item);
+                
+        }
+        blockClass();
+};
 
 //changes the class of each block to reflect the correct size in px
-let items = document.getElementsByClassName('gridItem');
-for (i=0; i<(totalGridItems); i++) {
-        const item = items[i];
-        item.style.fontSize = fontSizeString;
-}
-
+function blockClass() {
+        let items = document.getElementsByClassName('gridItem');
+        for (i=0; i<(totalGridItems); i++) {
+                const item = items[i];
+                item.style.fontSize = fontSizeString;
+        }
+};
 
 
 
