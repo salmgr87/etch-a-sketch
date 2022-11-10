@@ -48,3 +48,20 @@ document.addEventListener('click', function handleClick(event) {
         console.log("it worked");
     
 })
+
+
+document.addEventListener('mouseover', function handleClick(event) {
+        event.target.classList.toggle('clicked');
+        console.log("it worked");
+    
+})
+
+
+const erased = document.getElementById('erase');
+erased.addEventListener('click', function (e) {
+        eraseBoard();
+});
+
+function eraseBoard() {
+        alert("Board erased");
+}
