@@ -63,5 +63,10 @@ erased.addEventListener('click', function (e) {
 });
 
 function eraseBoard() {
+        const eraseBlock = document.getElementsByClassName('clicked');
+        for (i=eraseBlock.length-1; i>=0; i--) {
+                console.log(eraseBlock[i]);
+                eraseBlock[i].classList.remove('clicked');
+        }
         alert("Board erased");
 }
