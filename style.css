@@ -7,8 +7,8 @@
 
 button {
     background-color: whitesmoke;
-    width: 5.5em;
-    border-radius: 15%;
+    width: 10em;
+    border-radius: 20%;
 }
 
 .instruction {
@@ -17,6 +17,7 @@ button {
     align-items: center;
     padding: 1em;
     font-size: 30px;
+    border-style: ridge;
 }
 
 /*grid-template columns: repeat(= number of chosen rows)*/
@@ -42,5 +43,10 @@ button {
 }
 
 .container .clicked {
-    background-color: blue;
+    /*background-color: blue;*/
+    background-color: white;
+}
+
+.unclicked {
+    background-color: white;
 }

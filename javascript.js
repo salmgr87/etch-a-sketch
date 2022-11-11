@@ -45,14 +45,23 @@ function blockClass() {
 
 document.addEventListener('click', function handleClick(event) {
         event.target.classList.toggle('clicked');
-        console.log("it worked");
+        if (event.target.classList.contains('gridItem')) {
+                if (event.target.style.backgroundColor != 'white') {
+                        event.target.style.backgroundColor = 'white';
+                }
+                else {event.target.style.backgroundColor = 'blue'};
+                console.log("it worked");
+        }
     
 })
 
 
 document.addEventListener('mouseover', function handleClick(event) {
-        event.target.classList.toggle('clicked');
-        console.log("it worked");
+        if (event.target.classList.contains('gridItem')) {
+                event.target.classList.add('clicked');
+                event.target.style.backgroundColor = 'blue';
+                console.log("it worked");
+        }
     
 })
 
@@ -66,7 +75,8 @@ function eraseBoard() {
         const eraseBlock = document.getElementsByClassName('clicked');
         for (i=eraseBlock.length-1; i>=0; i--) {
                 console.log(eraseBlock[i]);
+                eraseBlock[i].style.backgroundColor = 'white';
                 eraseBlock[i].classList.remove('clicked');
+                
         }
-        alert("Board erased");
 }
