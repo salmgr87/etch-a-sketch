@@ -42,30 +42,30 @@ function blockClass() {
 };
 
 
-
+//for clicking on blocks...
 document.addEventListener('click', function handleClick(event) {
         event.target.classList.toggle('clicked');
         if (event.target.classList.contains('gridItem')) {
                 if (event.target.style.backgroundColor != 'white') {
                         event.target.style.backgroundColor = 'white';
                 }
-                else {event.target.style.backgroundColor = 'blue'};
+                else {event.target.style.backgroundColor = currentColor};
                 console.log("it worked");
         }
     
 })
 
-
+//for mouseover blocks...
 document.addEventListener('mouseover', function handleClick(event) {
         if (event.target.classList.contains('gridItem')) {
                 event.target.classList.add('clicked');
-                event.target.style.backgroundColor = 'blue';
+                event.target.style.backgroundColor = currentColor;
                 console.log("it worked");
         }
     
 })
 
-
+//to erase all blocks...
 const erased = document.getElementById('erase');
 erased.addEventListener('click', function (e) {
         eraseBoard();
@@ -80,3 +80,17 @@ function eraseBoard() {
                 
         }
 }
+
+
+//to choose a color
+currentColor = 'blue';
+
+const redClicked = document.getElementById('red');
+redClicked.addEventListener('click', function (e) {
+        currentColor = 'red';
+})
+
+const blueClicked = document.getElementById('blue');
+blueClicked.addEventListener('click', function (e) {
+        currentColor = 'blue';
+})
