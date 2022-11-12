@@ -114,3 +114,21 @@ dragOnOff.addEventListener('click', function (e) {
                 dragOnOff.textContent = 'Click or mouseover';
         }
 })
+
+
+//restart button
+const restartClicked = document.getElementById('restart');
+restartClicked.addEventListener('click', function (e) {
+        eraseBoard();
+        let removeItems = document.getElementById('containerID');
+        while (removeItems.firstChild) {
+                removeItems.removeChild(removeItems.firstChild);
+        }
+        rows = prompt("How many rows?");
+        totalGridItems = rows*rows;
+        fontSizez = 400/rows;
+        fontSizeString = fontSizez + "px";
+        createFraction();
+}
+
+)
