@@ -98,11 +98,13 @@ currentColor = 'blue';
 const redClicked = document.getElementById('red');
 redClicked.addEventListener('click', function (e) {
         currentColor = 'red';
+        if (randomColorOnOff == true) {randomColorOnOff = false;}
 })
 
 const blueClicked = document.getElementById('blue');
 blueClicked.addEventListener('click', function (e) {
         currentColor = 'blue';
+        if (randomColorOnOff == true) {randomColorOnOff = false;}
 })
 
 
@@ -117,6 +119,7 @@ function randomizeColor() {
         randomColor = Math.floor(Math.random()*16777215).toString(16);
         randomColor = '#' + randomColor;
         currentColor = randomColor;
+        console.log(currentColor);
 }
 
 
