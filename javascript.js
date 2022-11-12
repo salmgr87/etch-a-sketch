@@ -105,6 +105,12 @@ let dragMouse = true;
 
 const dragOnOff = document.getElementById('dragOnOff');
 dragOnOff.addEventListener('click', function (e) {
-        if (dragMouse == true) {dragMouse = false}
-        else if (dragMouse == false) {dragMouse = true};
+        if (dragMouse == true) {
+                dragMouse = false;
+                dragOnOff.textContent = 'Click mode';
+        }
+        else if (dragMouse == false) {
+                dragMouse = true;
+                dragOnOff.textContent = 'Click or mouseover';
+        }
 })
