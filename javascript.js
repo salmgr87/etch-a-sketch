@@ -44,6 +44,9 @@ function blockClass() {
 
 //for clicking on blocks... now requires 2 consecutive clicks if starting as white e.g. on mobile
 document.addEventListener('click', function handleClick(event) {
+        if (randomColorOnOff == true) {
+                randomizeColor();
+        }
         if (event.target.classList.contains('clicked')) {
                 event.target.classList.remove('clicked');
                 event.target.style.backgroundColor = 'white';
@@ -59,6 +62,9 @@ document.addEventListener('click', function handleClick(event) {
 //for mouseover blocks...
 
 document.addEventListener('mouseover', function handleClick(event) {
+        if (randomColorOnOff == true) {
+                randomizeColor();
+        }
         if (dragMouse == true) {
                 if (event.target.classList.contains('gridItem')) {
                         event.target.classList.add('clicked');
@@ -100,6 +106,23 @@ blueClicked.addEventListener('click', function (e) {
 })
 
 
+//random colors
+let randomColorOnOff = false;
+let randomColor = '#000000';
+
+const randomColorBtn = document.getElementById('randomColor');
+randomColorBtn.addEventListener('click', function () {randomColorOnOff = !randomColorOnOff});
+
+function randomizeColor() {
+        randomColor = Math.floor(Math.random()*16777215).toString(16);
+        randomColor = '#' + randomColor;
+        currentColor = randomColor;
+}
+
+
+
+
+
 //to toggle the mouseover
 let dragMouse = true;
 
@@ -129,6 +152,5 @@ restartClicked.addEventListener('click', function (e) {
         fontSizez = 400/rows;
         fontSizeString = fontSizez + "px";
         createFraction();
-}
+})
 
-)
