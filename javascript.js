@@ -127,7 +127,7 @@ function randomizeColor() {
 
 
 //to toggle the mouseover
-let dragMouse = true;
+let dragMouse = false;
 
 const dragOnOff = document.getElementById('dragOnOff');
 dragOnOff.addEventListener('click', function (e) {
