@@ -59,12 +59,14 @@ document.addEventListener('click', function handleClick(event) {
 //for mouseover blocks...
 
 document.addEventListener('mouseover', function handleClick(event) {
-        if (event.target.classList.contains('gridItem')) {
-                event.target.classList.add('clicked');
-                event.target.style.backgroundColor = currentColor;
-                console.log("it worked");
+        if (dragMouse == true) {
+                if (event.target.classList.contains('gridItem')) {
+                        event.target.classList.add('clicked');
+                        event.target.style.backgroundColor = currentColor;
+                        console.log("it worked");
+                }
         }
-    
+        
 })
 
 //to erase all blocks...
@@ -95,4 +97,14 @@ redClicked.addEventListener('click', function (e) {
 const blueClicked = document.getElementById('blue');
 blueClicked.addEventListener('click', function (e) {
         currentColor = 'blue';
+})
+
+
+//to toggle the mouseover
+let dragMouse = true;
+
+const dragOnOff = document.getElementById('dragOnOff');
+dragOnOff.addEventListener('click', function (e) {
+        if (dragMouse == true) {dragMouse = false}
+        else if (dragMouse == false) {dragMouse = true};
 })
