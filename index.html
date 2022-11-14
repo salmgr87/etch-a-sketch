@@ -11,11 +11,18 @@
             <div class="instruction">
                 <div>Enjoy the Etch-a-sketch!</div>
                 <br><button id="erase">Clear board</button></br>
-                <button id="blue">Blue blocks</button>
-                <button id="red">Red blocks</button>
+                <!-- ORIGINAL BUTTON COLORS <button id="blue">Blue blocks</button>
+                <button id="red">Red blocks</button>-->
+                <label for='allColors'>Choose a color</label>
+                <select id='allColors'>
+                    <option value='black'>Black</option>
+                    <option value='blue'>Blue</option>
+                    <option value='brown'>Brown</option>
+                    <option value='cyan'>Cyan</option>
+                </select>
                 <button id='randomColor'>Random colors</button>
-                <button id='dragOnOff'>Toggle click only</button>
-                <br><button id='restart'>Restart</button></br>
+                <button id='dragOnOff'>Toggle: Click only</button>
+                <button id='restart'>New board</button>
             </div>
             <div class="container" id='containerID'>
 

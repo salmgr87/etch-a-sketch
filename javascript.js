@@ -92,9 +92,10 @@ function eraseBoard() {
 }
 
 
-//to choose a color
-currentColor = 'blue';
 
+
+
+/*original colors, no longer needed
 const redClicked = document.getElementById('red');
 redClicked.addEventListener('click', function (e) {
         currentColor = 'red';
@@ -106,14 +107,39 @@ blueClicked.addEventListener('click', function (e) {
         currentColor = 'blue';
         if (randomColorOnOff == true) {randomColorOnOff = false;}
 })
+*/
+
+
+//select your own color
+currentColor = 'black';
+
+const allColorsClicked = document.getElementById('allColors');
+
+allColorsClicked.onchange = (event) => {
+        currentColor = allColorsClicked.value;
+        console.log(currentColor);
+}
+
 
 
 //random colors
 let randomColorOnOff = false;
 let randomColor = '#000000';
+let randomColorText = 0;
 
 const randomColorBtn = document.getElementById('randomColor');
-randomColorBtn.addEventListener('click', function () {randomColorOnOff = !randomColorOnOff});
+randomColorBtn.addEventListener('click', function () {
+        randomColorOnOff = !randomColorOnOff;
+        if (randomColorText == 0) {
+                randomColorText = 1;
+                randomColorBtn.textContent = 'Any random color';
+
+        } else {
+                randomColorText = 0;
+                randomColorBtn.textContent = 'One random color';
+        }
+        
+});
 
 function randomizeColor() {
         randomColor = Math.floor(Math.random()*16777215).toString(16);

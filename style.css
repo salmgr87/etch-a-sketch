@@ -51,3 +51,8 @@ button {
 .unclicked {
     background-color: white;
 }
+
+
+.hightlighted {
+    background-color: yellowgreen;
+}
