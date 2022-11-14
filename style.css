@@ -38,7 +38,7 @@ button {
     font-size: 100px;
     height: 1em;
     width: 1em;
-    border-radius: 5%;
+    /*border-radius: 5%;*/
     
     
 }
@@ -55,4 +55,13 @@ button {
 
 .hightlighted {
     background-color: yellowgreen;
+}
+
+
+label {
+    font-size: 15pt;
+}
+
+#currentSelectedColor {
+    background-color: black;
 }

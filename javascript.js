@@ -118,6 +118,7 @@ const allColorsClicked = document.getElementById('allColors');
 allColorsClicked.onchange = (event) => {
         currentColor = allColorsClicked.value;
         console.log(currentColor);
+        currentSelectedColor.style.backgroundColor = currentColor;
 }
 
 
@@ -145,6 +146,7 @@ function randomizeColor() {
         randomColor = Math.floor(Math.random()*16777215).toString(16);
         randomColor = '#' + randomColor;
         currentColor = randomColor;
+        currentSelectedColor.style.backgroundColor = currentColor;
         console.log(currentColor);
 }
 
@@ -183,3 +185,6 @@ restartClicked.addEventListener('click', function (e) {
         createFraction();
 })
 
+
+//shows current color
+const currentSelectedColor = document.getElementById('currentSelectedColor');
