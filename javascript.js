@@ -169,6 +169,27 @@ dragOnOff.addEventListener('click', function (e) {
         }
 })
 
+//Add toggling the mouseover with a keystroke
+document.onkeydown = checkKeycode
+
+function checkKeycode(e) {
+        let keycode;
+        if (window.event) {
+                keycode = window.event.keyCode;
+        }
+        if (keycode == 67) {
+                if (dragMouse == true) {
+                        dragMouse = false;
+                        dragOnOff.textContent = 'Click mode';
+                }
+                else if (dragMouse == false) {
+                        dragMouse = true;
+                        dragOnOff.textContent = 'Click or mouseover';
+                }
+        }
+
+}
+
 
 //restart button
 const restartClicked = document.getElementById('restart');

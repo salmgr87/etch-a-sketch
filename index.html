@@ -12,26 +12,32 @@
                 <div>Enjoy the Etch-a-sketch!</div>
                 <!-- ORIGINAL BUTTON COLORS <button id="blue">Blue blocks</button>
                 <button id="red">Red blocks</button>-->
-                <br><label for='allColors'>Choose a color</label>
-                <select id='allColors'>
-                    <option value='black'>Black</option>
-                    <option value='blue'>Blue</option>
-                    <option value='brown'>Brown</option>
-                    <option value='cyan'>Cyan</option>
-                    <option value='gold'>Gold</option>
-                    <option value='gray'>Gray</option>
-                    <option value='green'>Green</option>
-                    <option value='orange'>Orange</option>
-                    <option value='pink'>Pink</option>
-                    <option value='purple'>Purple</option>
-                    <option value='red'>Red</option>
-                    <option value='yellow'>Yellow</option>
-                </select>
-                <button id='randomColor'>Random colors</button>
-                <button id='dragOnOff'>Toggle: Click only</button>
-                <br><button id="erase">Clear board</button>
-                <button id='restart'>New board</button>
-                <br><div>Current color</div>
+                <br>
+                <div>
+                    <label for='allColors'>Choose a color</label>
+                    <select id='allColors'>
+                        <option value='black'>Black</option>
+                        <option value='blue'>Blue</option>
+                        <option value='brown'>Brown</option>
+                        <option value='cyan'>Cyan</option>
+                        <option value='gold'>Gold</option>
+                        <option value='gray'>Gray</option>
+                        <option value='green'>Green</option>
+                        <option value='orange'>Orange</option>
+                        <option value='pink'>Pink</option>
+                        <option value='purple'>Purple</option>
+                        <option value='red'>Red</option>
+                        <option value='yellow'>Yellow</option>
+                    </select>
+                    <button id='randomColor'>Random colors</button>
+                    </div>
+                <br><button id='dragOnOff'>Toggle: Click only</button>
+                <div id='toggleInstructions'>Toggle click/drag by pressing C on your keyboard<br></div>
+                <div>
+                    <br><button id="erase">Clear board</button>
+                    <button id='restart'>New board</button>
+                    </div>
+                <br><div class='currentColorWords'>Current color</div>
                 <div id='currentSelectedColor'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
             <div class="container" id='containerID'>

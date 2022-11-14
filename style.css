@@ -65,3 +65,14 @@ label {
 #currentSelectedColor {
     background-color: black;
 }
+
+
+#toggleInstructions {
+    font-size: 10pt;
+    font-style: italic;
+}
+
+.currentColorWords {
+    font-size: 15pt;
+    font-style: italic;
+}
